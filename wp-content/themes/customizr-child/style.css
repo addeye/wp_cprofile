@@ -1,0 +1,264 @@
+/*
+Theme Name:     Customizr Child
+Theme URI:      http://themesandco.com/customizr
+Description:    A child theme for the Customizr WordPress theme. This child theme simply includes 2 files : style.css to add your custom css and functions.php where you can extend Customizr's core code. In order to keep your code as clean and flexible as possible, try to use Customizr's hooks API for your customizations. Do something awesome and have fun !
+Author:         Nicolas Guillaume (nikeo)
+Author URI:     http://themesandco.com
+Template:       customizr
+Version:        1.0.0
+*/
+
+/* Your awesome customizations start right here !
+-------------------------------------------------------------- */
+
+@import url("../customizr/inc/assets/css/blue3.min.css");
+
+.tc-header {
+    border-top: 5px solid #FAD000;
+}
+.comments-link .tc-comment-bubble, .dropdown-menu>li.current-menu-item>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-submenu:focus>a, .dropdown-submenu:hover>a, .navbar .btn-toggle-nav.hover .menu-label, .navbar .nav>li.current-menu-item>a, .page-links button.btn, .site-description, .social-block a:hover, .tc-carousel-control:hover, .tc-regular-menu .dropdown-menu>li.current-menu-ancestor>a, .tc-regular-menu .navbar .nav>li.current-menu-ancestor>a, .widget h3:before, .widget.widget_archive li:before, .widget.widget_calendar li:before, .widget.widget_categories li:before, .widget.widget_links li:before, .widget.widget_meta li:before, .widget.widget_nav_menu li:before, .widget.widget_pages li:before, .widget.widget_recent_comments li:before, .widget.widget_recent_entries li:before, .widget.widget_rss li:before, a+span.tc-external:after {
+    color: #f89406;
+}
+
+.navbar .nav>li>a:focus, .navbar .nav>li>a:hover {
+    background-color: transparent;
+    color: #f89406;
+    text-decoration: none;
+}
+
+.comments-link .tc-comment-bubble, .dropdown-menu>li.current-menu-item>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-submenu:focus>a, .dropdown-submenu:hover>a, .navbar .btn-toggle-nav.hover .menu-label, .navbar .nav>li.current-menu-item>a, .page-links button.btn, .site-description, .social-block a:hover, .tc-carousel-control:hover, .tc-regular-menu .dropdown-menu>li.current-menu-ancestor>a, .tc-regular-menu .navbar .nav>li.current-menu-ancestor>a, .widget h3:before, .widget.widget_archive li:before, .widget.widget_calendar li:before, .widget.widget_categories li:before, .widget.widget_links li:before, .widget.widget_meta li:before, .widget.widget_nav_menu li:before, .widget.widget_pages li:before, .widget.widget_recent_comments li:before, .widget.widget_recent_entries li:before, .widget.widget_rss li:before, a+span.tc-external:after {
+    color: #f89406;
+}
+
+.btn-primary.active, .btn-primary.disabled, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-primary[disabled] {
+    color: #FAD000;
+    background-color: #222;
+}
+
+.btn:focus, a:focus {
+    outline: #222 auto 5px;
+}
+
+.btn-primary {
+    color: #FAD000;
+    background-color: #222;
+    background-image: -moz-linear-gradient(top,#27cda5,#1b8d71);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#27cda5),to(#1b8d71));
+    background-image: -webkit-linear-gradient(top,#27cda5,#1b8d71);
+    background-image: -o-linear-gradient(top,#27cda5,#1b8d71);
+    background-image: linear-gradient(to bottom,#222,#222);
+    border-color: #1b8d71 #1b8d71 #0f4c3e;
+    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+}
+
+a {
+    color: #f89406;
+    text-decoration: none;
+}
+
+h3.assistive-text {
+    color: #f89406;
+}
+
+a:focus, a:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+
+@import url("../customizr/inc/assets/css/tc_common.min.css");
+
+.tc-header {
+    min-height: 45px;
+    background: #FAD000;
+    border-bottom: 10px solid #006441;
+    z-index: 200;
+}
+
+.navbar .nav>li>a {
+    float: none;
+    color: #222;
+    text-decoration: none;
+    text-shadow: 0 0px 0 #222;
+    font-size: 20px;
+}
+
+.sticky-enabled .tc-header {
+    height: auto!important;
+    background: #fff;
+    background: rgba(250, 208, 0, 0.82);
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
+    border-bottom: 2px solid #006441;
+    border-top: 0;
+}
+
+footer#footer {
+    color: #fafafa!important;
+    border-top: 10px solid #006441;
+    background: #222;
+    padding: 0;
+}
+footer#footer h3, footer#footer h4, footer#footer h5, footer#footer h6 {
+    font-size: 22px;
+    line-height: 26px;
+    color: #fafafa;
+    text-align: center;
+    text-shadow: 0 0 0 #fafafa;
+}
+
+footer#footer a, footer#footer p {
+    font-size: 11px;
+    line-height: 21px;
+    color: #fafafa;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.btt-arrow:before {
+    content: "\f432";
+    text-shadow: 0 1px 0 #222;
+}
+
+.tc-btt-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+    z-index: 99999999;
+    background: #777;
+    background: rgb(230, 223, 117);
+    background: #fff\9;
+    border: 1px solid #ddd\9;
+    color: #EEE;
+    width: 45px;
+    height: 43px;
+    line-height: 43px;
+    right: 30px;
+    bottom: 25px;
+    padding-top: 2px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+}
+
+.tc-btt-wrapper:hover {
+    background: #f89406;
+    background: rgb(246, 210, 21);
+}
+
+footer#footer .colophon {
+    margin-top: 0;
+    background-color: #222;
+    padding: 10px 20px;
+}
+footer#footer .colophon a, footer#footer .colophon p {
+    color: #fafafa;
+}
+
+input[type=submit]:hover {
+    color: #FAD000;
+    background-color: #222;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position .1s linear;
+    -moz-transition: background-position .1s linear;
+    -o-transition: background-position .1s linear;
+    transition: background-position .1s linear;
+}
+
+.comments-link .inner, input[type=submit] {
+    text-align: center;
+    color: #FAD000;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body {
+    padding-bottom: 0;
+    color: #222;
+    background: #E6DF75;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.round-div {
+    display: block;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    z-index: 99;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 500px;
+    border-radius: 900px;
+    border: 104px solid #E6DF75;
+    border-image: none;
+    top: -66px;
+    left: -54px;
+}
+
+#main-wrapper .widget li:after {
+    content: "";
+    border-bottom: 1px solid #222;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: -2px;
+}
+
+#main-wrapper .widget li {
+    line-height: 25px;
+    border-bottom: 1px solid #222;
+    position: relative;
+}
+
+#left.widget-area::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid #222;
+    right: -2px;
+    bottom: 0;
+}
+
+#left.widget-area {
+    padding-right: 5px;
+    border-right: 1px solid #222;
+    position: relative;
+}
+
+#main-wrapper .widget li a {
+    text-shadow: 0 1px 0 #F6D215;
+}
+
+#main-wrapper .widget li:hover, .widget li:focus {
+    text-decoration: none;
+    background-color: #E6DF75;
+}
+
+@media (max-width: 979px){
+.widget-front .round-div {
+    width: 150px;
+    height: 150px;
+    border: 94px solid #E6DF75;
+    top: -44px;
+    left: -65px;
+}
+}
+
+.sticky-enabled .tc-header .navbar .nav>li>a {
+    font-size: 20px;
+}
